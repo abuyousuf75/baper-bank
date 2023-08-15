@@ -2,9 +2,14 @@ document.getElementById('withdraw-btn').addEventListener('click',function(){
     const withdrawField = document.getElementById('withdraw-field');
     const newWithdrawString = withdrawField.value;
     const newWithdrawAmound = parseFloat(newWithdrawString);
+    withdrawField.value = '';
+    if(isNaN(newWithdrawAmound)){
+        alert ('Please provide a valid number');
+        return 
+    }
    
     // clear value 
-    withdrawField.value = '';
+   
 
     const withdrawElement = document.getElementById('withdrawBlance');
     const previousWithdrawString = withdrawElement.innerText;

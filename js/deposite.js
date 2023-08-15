@@ -4,7 +4,12 @@ document.getElementById('btn-deposite').addEventListener('click',function(){
      const depoiteFiled =  document.getElementById('deposite-field');
      const newDepositeAmoundString = depoiteFiled.value;
      const newDepositeAmound = parseFloat(newDepositeAmoundString)
-
+     depoiteFiled.value = '';
+     if(isNaN(newDepositeAmound)){
+      alert ('Please provide a valid number');
+      return 
+  }
+ 
      // step 3 -> add amound on dolor value 
      const depsiteTotalElement = document.getElementById('depositeBlance');
      const previousDepositeTotalString = depsiteTotalElement.innerText;
@@ -22,6 +27,6 @@ document.getElementById('btn-deposite').addEventListener('click',function(){
 
 
      // clear input field
-     depoiteFiled.value = '';
+    
 
 })
