@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deposite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>hgv</h1>
+<style>
+     .container{
+            max-width: 1200px!important;
+        }
+        .widthraw-btn{
+            padding: 10px 30px;
+            background: #f1f1f1;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            display: flex;
+           
+        }
+        .deposite-btn{
+            padding: 10px 30px;
+            background: #f1f1f1;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            display: flex;
+        }
+</style>
+<body class="container mx-auto">
+    <div class="mb-20">
+        <h1 class="text-center text-5xl mt-8 font-semibold">Let's get Some <span class="text-amber-600"> Mooooooney!!</span></h1>
+    </div>
+    <section>
+        <div class="grid grid-cols-3 gap-4 mt-10 ">
+            <div class="bg-green-500 p-8 rounded-xl text-white text-4xl">
+                <h4 class="mb-3">Deposite</h4>
+                <h2>$ <span id="depositeBlance">00</span></h2>
+            </div>
+            <div class="bg-red-500 p-8 rounded-xl text-white text-4xl">
+                <h4 class="mb-3">Withdraw</h4>
+                <h2>$ <span id="withdrawBlance">00</span></h2>
+            </div>
+            <div class="bg-yellow-500 p-8 rounded-xl text-white text-4xl">
+                <h4 class="mb-3">Blance</h4>
+                <h2>$ <span id="balance-total">1240</span></h2>
+            </div>
+        </div>
+    </section>
+    <!--deposite withdraw section-->
+
+    <section>
+        <div class="grid grid-cols-2 gap-4 mt-10 ">
+            <div class="bg-green-500 p-12 rounded-xl">
+                <h1 class="text-3xl text-white mb-4">Please Deposite</h1>
+                <input type="text" class="block w-9/12 rounded mb-4 px-3 py-2  m-auto" name="" id="deposite-field" placeholder="Inter Your Deposite Amound ">
+                <button class="deposite-btn" id="btn-deposite">Deposite</button>
+            </div>
+            <div class="bg-red-500 p-12 rounded-xl">
+                <h1 class="text-3xl text-white mb-4">Please Withdraw</h1>
+                <input type="text" class="block w-9/12 rounded px-3  m-auto py-2" name="" id="withdraw-field" placeholder="Inter Your Withdraw Amond">
+                <button class="widthraw-btn mt-4" id="withdraw-btn">Withdraw</button>
+            </div>
+        </div>
+    </section>
+    <script src="./js/deposite.js"></script>
+    <script src="./js/withdraw.js"></script>
 </body>
 </html>
